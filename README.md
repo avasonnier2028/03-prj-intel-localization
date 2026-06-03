@@ -3,10 +3,7 @@ You'll adapt your Intel Journey webpage to support right-to-left (RTL) languages
 
 You'll modify the layout, integrate Bootstrap, and add a subscription form to enhance user engagement.
 
-
-////////////////////////////////////////////////////////////////////
 ///////////////////////////// TASKS ////////////////////////////////
-////////////////////////////////////////////////////////////////////
 
     –The website correctly applies RTL layout, including proper text flow, alignment, and element repositioning
     -Uses Bootstrap’s grid for a responsive layout with icons in headings and consistently styled 'Learn More' buttons, adapting to all screen sizes
