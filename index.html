@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" > <!--dir="rtl"-->
+<html lang="en" dir="rtl">
 <head>
   <meta charset="utf-8" > 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Intel: Sustainability Through the Ages</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css"
-    integrity="sha384-CfCrinSRH2IR6a4e6fy2q6ioOX7O6Mtm1L9vRvFZ1trBncWmMePhzvafv7oIcWiW" crossorigin="anonymous">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"/>
 
@@ -34,6 +35,7 @@
     </div>
   </header>
 
+  <main>
   <!-- Timeline Cards Section -->
   <section id="timeline-scroller">
     <div class="timeline-overlay"></div>
@@ -44,7 +46,7 @@
         <h2 class="title">1968</h2>
         <h3 class="title">Intel Founded</h3>
         <div class="card-content">
-          <img src="./img/1.jpg" />
+          <img src="./img/1.jpg" alt="Intel Corporation founding in 1968 - Early technology innovation" />
           <p>
             Robert Noyce and Gordon Moore rename the newly formed company 
             NM Electronics to Intel Corporation, laying the foundation for 
@@ -60,7 +62,7 @@
         <h2 class="title">1971</h2>
         <h3 class="title">First Microprocessor</h3>
         <div class="card-content">
-          <img src="./img/2.jpg" />
+          <img src="./img/2.jpg" alt="Intel 4004 microprocessor - First commercial microprocessor released in 1971" />
           <p>
             Intel debuts the 4004, the world's first commercial microprocessor, 
             igniting the microprocessor revolution and propelling the future 
@@ -76,7 +78,7 @@
         <h2 class="title">1978</h2>
         <h3 class="title">8086 Processor</h3>
         <div class="card-content">
-          <img src="./img/3.jpg" />
+          <img src="./img/3.jpg" alt="Intel 8086 processor - Revolutionary x86 architecture chip from 1978" />
           <p>
             Launch of the 8086 processor, establishing the x86 architecture 
             that drives countless PCs and servers in the modern era.
@@ -91,7 +93,7 @@
         <h2 class="title">1985</h2>
         <h3 class="title">386 Processor</h3>
         <div class="card-content">
-          <img src="./img/4.jpg" />
+          <img src="./img/4.jpg" alt="Intel 386 processor - 32-bit architecture microprocessor from 1985" />
           <p>
             Intel introduces the 386 processor with 32-bit architecture, 
             ushering in a new era of performance and multitasking for 
@@ -107,7 +109,7 @@
         <h2 class="title">2006</h2>
         <h3 class="title">Peak GHG Emissions</h3>
         <div class="card-content">
-          <img src="./img/extra-pics/5.jpg" />
+          <img src="./img/extra-pics/5.jpg" alt="Graph showing Intel's peak greenhouse gas emissions in 2006 - Highest annual GHG emissions before sustainability improvements" />
           <p>
             This year marks Intel's highest annual greenhouse gas emissions 
             for operations. Over subsequent years, Intel invests heavily in 
@@ -124,7 +126,7 @@
         <h2 class="title">2020</h2>
         <h3 class="title">RISE Strategy</h3>
         <div class="card-content">
-          <img src="./img/extra-pics/6.jpeg" />
+          <img src="./img/extra-pics/6.jpeg" alt="RISE Strategy - Intel's 2020 Responsible, Inclusive, Sustainable, Enabling initiative for 2030 goals" />
           <p>
             Intel launches its RISE (Responsible, Inclusive, Sustainable, 
             Enabling) strategy and 2030 goals, aiming to drive industry-wide 
@@ -140,7 +142,7 @@
         <h2 class="title">2022</h2>
         <h3 class="title">Net-Zero By 2040</h3>
         <div class="card-content">
-          <img src="./img/extra-pics/7.webp" />
+          <img src="./img/extra-pics/7.webp" alt="Net-zero commitment announcement - Intel's 2022 pledge to achieve net-zero greenhouse gas emissions by 2040" />
           <p>
             Intel announces its commitment to achieve net-zero greenhouse 
             gas emissions (Scope 1 and 2) across its global operations 
@@ -156,7 +158,7 @@
         <h2 class="title">2023</h2>
         <h3 class="title">Renewable Electricity</h3>
         <div class="card-content">
-          <img src="./img/extra-pics/8.jpg" />
+          <img src="./img/extra-pics/8.jpg" alt="Renewable energy solar panels - Intel achieves 99% renewable electricity usage worldwide in 2023" />
           <p>
             The company achieves 99% renewable electricity usage worldwide, 
             helping to drastically lower carbon emissions and driving progress 
@@ -172,7 +174,7 @@
         <h2 class="title">2024</h2>
         <h3 class="title">Sustainability Summit</h3>
         <div class="card-content">
-          <img src="./img/extra-pics/9.png" />
+          <img src="./img/extra-pics/9.png" alt="Intel Sustainability Summit 2024 - Industry leaders collaborating on sustainable semiconductor manufacturing" />
           <p>
             Intel hosts its first Sustainability Summit, uniting suppliers, 
             government officials, and industry leaders to collaborate on 
@@ -190,11 +192,13 @@
 
     <!-- 3-Column Content Section -->
     <section id="pledges">
-      <div class="row">
+      <h2 class="title text-center">Our Sustainability Pledges</h2>
+      <!-- Bootstrap grid: 1 column on small, 3 columns on medium+ with gap-3 -->
+      <div class="row g-3">
     
         <!-- Column 1 -->
-        <div class ="pledge col p-3 p-lg-4 d-flex justify-content-center align-items-center flex-column">
-          <h2 class="title text-center">RISE Strategy</h2>
+        <div class="pledge col-12 col-md d-flex justify-content-center align-items-center flex-column">
+          <h3 class="title text-center">RISE Strategy</h3>
           <p>
             Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy,
             Intel sets ambitious 2030 goals, including driving industry-wide
@@ -205,8 +209,8 @@
         </div>
     
         <!-- Column 2 -->
-        <div class ="pledge col p-3 p-lg-4 d-flex justify-content-center align-items-center flex-column">
-          <h2 class="title text-center">Commitment</h2>
+        <div class="pledge col-12 col-md d-flex justify-content-center align-items-center flex-column">
+          <h3 class="title text-center">Commitment</h3>
           <p>
             In 2022, Intel pledged to achieve net-zero greenhouse gas emissions
             (Scope 1 and 2) by 2040. This commitment builds on decades of
@@ -218,8 +222,8 @@
         </div>
     
         <!-- Column 3 -->
-        <div class ="pledge col p-3 p-lg-4 d-flex justify-content-center align-items-center flex-column">
-          <h2 class="title text-center">Water &amp; Waste</h2>
+        <div class="pledge col-12 col-md d-flex justify-content-center align-items-center flex-column">
+          <h3 class="title text-center">Water &amp; Waste</h3>
           <p>
             Intel conserves billions of gallons of water annually and
             collaborates with local communities to restore watersheds.
@@ -232,71 +236,113 @@
     
       </div>
     </section>
-    
-    <!-- Subscription Form -->
-    <!-- This section allows users to subscribe to the newsletter -->
-    <section id="newsletter-section" class="newsletter-container">
-      <h2 class="title">Subscribe to our Newsletter</h2>
+
+    <!-- Off-canvas Button Section -->
+    <section id="offcanvas-button-section">
+      <!-- Centered button to open newsletter subscription form -->
+      <button class="btn offcanvas-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+        aria-controls="offcanvasBottom">Subscribe to our Newsletter</button>
+    </section>
       
-      <!-- Bootstrap form with responsive layout -->
-      <form id="newsletter-form" class="newsletter-form">
-        <!-- Form group for email input -->
-        <div class="mb-3 email-group">
-          <!-- Label for accessibility (visible only to screen readers) -->
-          <label for="emailInput" class="form-label visually-hidden">Email address</label>
-          
-          <!-- Email input field with Bootstrap styling -->
-          <input 
-            type="email" 
-            class="form-control" 
-            id="emailInput" 
-            placeholder="Enter your email address"
-            required
-            aria-label="Email address"
-          />
-        </div>
-
-        <!-- Form group for name input (optional) -->
-        <div class="mb-3 name-group">
-          <!-- Label for accessibility -->
-          <label for="nameInput" class="form-label visually-hidden">Full name</label>
-          
-          <!-- Text input field for user's name -->
-          <input 
-            type="text" 
-            class="form-control" 
-            id="nameInput" 
-            placeholder="Your name (optional)"
-            aria-label="Your name"
-          />
-        </div>
-
-        <!-- Checkbox for terms agreement -->
-        <div class="mb-3 form-check checkbox-group">
-          <!-- Checkbox input for agreeing to receive emails -->
-          <input 
-            type="checkbox" 
-            class="form-check-input" 
-            id="agreeCheck"
-            required
-            aria-label="I agree to receive promotional emails"
-          />
-          <!-- Label for the checkbox -->
-          <label class="form-check-label" for="agreeCheck">
-            I agree to receive promotional emails about Intel's sustainability initiatives
-          </label>
-        </div>
-
-        <!-- Submit button with custom styling -->
-        <button type="submit" class="btn btn-primary newsletter-btn"><em>Subscribe Now</em></button>
-      </form>
-
-      <!-- Success message (hidden by default, shown after submission) -->
-      <div id="successMessage" class="alert alert-success alert-dismissible fade" role="alert" style="display: none;">
-        Thank you for subscribing! Check your email for confirmation.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <!-- Off-canvas Newsletter Modal -->
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+      <!-- Close button positioned in top right -->
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
+      <!-- Off-canvas body containing the form -->
+      <div class="offcanvas-body offcanvas-form-body p-0">
+        <!-- Subscription Form -->
+        <!-- This section allows users to subscribe to the newsletter -->
+        <section id="newsletter-section-modal">
+          <div class="newsletter-content">
+            <h2 class="title">Subscribe to our Newsletter</h2>
+            <!-- Bootstrap form with responsive layout -->
+            <form id="newsletter-form" class="newsletter-form">
+              <!-- Form group for email input -->
+              <div class="mb-3 email-group">
+                <!-- Label for accessibility (visible only to screen readers) -->
+                <label for="emailInput" class="form-label visually-hidden">Email address</label>
+        
+                <!-- Email input field with Bootstrap styling -->
+                <input type="email" class="form-control" id="emailInput" placeholder="Enter your email address" required
+                  aria-label="Email address" />
+              </div>
+        
+              <!-- Form group for name input (optional) -->
+              <div class="mb-3 name-group">
+                <!-- Label for accessibility -->
+                <label for="nameInput" class="form-label visually-hidden">Full name</label>
+        
+                <!-- Text input field for user's name -->
+                <input type="text" class="form-control" id="nameInput" placeholder="Your name (optional)"
+                  aria-label="Your name" />
+              </div>
+        
+              <!-- Checkbox for terms agreement -->
+              <div class="mb-3 checkbox-group">
+                <!-- Checkbox input for agreeing to receive emails (positioned on the left) -->
+                <input type="checkbox" class="form-check-input" id="agreeCheck" required
+                  aria-label="I agree to receive promotional emails" />
+                <!-- Label for the checkbox (positioned to the right of checkbox) -->
+                <label class="form-check-label" for="agreeCheck">
+                  I agree to receive promotional emails about Intel's sustainability initiatives
+                </label>
+              </div>
+        
+              <!-- Submit button with custom styling -->
+              <button type="submit" class="btn btn-primary newsletter-btn">Subscribe Now</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+
     </section>
 
+    </main>
+    <!-- Footer Section -->
+    <!-- Footer with company information and links -->
+    <footer id="footer-section">
+      <div class="footer-content">
+        <!-- Footer column 1: About -->
+        <div class="footer-column">
+          <h3 class="footer-title">About Intel</h3>
+          <p>
+            Intel is a global technology leader committed to creating world-changing innovations. 
+            We pioneer computing technology and work toward a more sustainable future through responsible innovation.
+          </p>
+        </div>
+
+        <!-- Footer column 2: Quick Links -->
+        <div class="footer-column">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Home</a></li>
+            <li><a href="#" class="footer-link">Sustainability Goals</a></li>
+            <li><a href="#" class="footer-link">RISE Strategy</a></li>
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer column 3: Resources -->
+        <div class="footer-column">
+          <h3 class="footer-title">Resources</h3>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Newsroom</a></li>
+            <li><a href="#" class="footer-link">Investor Relations</a></li>
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer bottom with copyright info -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 Intel Corporation. All rights reserved. Crafted with commitment to sustainability.</p>
+      </div>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
