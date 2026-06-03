@@ -2,6 +2,7 @@
 html{
   --brandcolor-lightblue: #00C7FD;
   --brandcolor-darkblue: #0068B5;
+  --offwhite: rgb(250, 250, 250);
   --brandfont-body: 'Intel One Mono';
   --brandfont-title: 'Inter';
   
@@ -10,7 +11,7 @@ html{
 
 /* Defaults */
 body{
-  background-color: white;
+  background-color: var(--offwhite);
   font-family: var(--brandfont-body), 'Courier New', Courier, monospace;
   max-width: 1800px;
   min-width: 290px;
@@ -19,6 +20,7 @@ body{
 
 .title {
   font-family: var(--brandfont-title), 'Segoe UI', Tahoma, Verdana, sans-serif;
+  font-weight: 600;
 }
 
 /*Nav Bar*/
@@ -50,7 +52,7 @@ header{
 }
 
 .header-content{
-  color: white;
+  color: var(--offwhite);
   font-size: 1.2rem;
   max-width: 62.5rem;
   min-width: 28.125rem;
@@ -91,7 +93,7 @@ header h1::after {
   scroll-snap-type: x proximity;
 
   box-shadow: inset 0 0 0.7rem rgba(0, 0, 0, 0.3);
-  width: 90%;
+  width: 95%;
   scrollbar-width: none;
 }
 
@@ -109,8 +111,11 @@ header h1::after {
 .event{
   position: relative;
   margin: 1rem;
-  width: 21rem;
+  width: 24rem;
   padding: 1rem;
+  background-color: white;
+  position: relative;
+  z-index: -1;
 
   border-left: .375rem solid var(--brandcolor-darkblue);
 
@@ -122,9 +127,9 @@ header h1::after {
 }
 
 .card-content img{
+  height: 100%;
   width: 100%;
-  position: relative;
-  z-index: -1;
+  object-fit: cover;
 
   transition: opacity 0.4s ease-in-out 0.2s;
 }
@@ -133,40 +138,177 @@ header h1::after {
   border-radius: 0.4rem;
   position: relative;
   overflow: hidden;
-  height: 8rem;
+  height: 9.5rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: all 0.4s ease-in-out 0.2s;
 }
 
 .card-content p{
   box-sizing: border-box;
-  padding-left: 0.4rem;
-  padding-right: 0.2rem;
+  padding-top: 0.8rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   opacity: 0;
   position: absolute;
-  top: -0.4rem;
+  
   width: 100%;
   transition: opacity 0.4s ease-in-out 0.2s;
   font-size: 0.82rem;
 }
 
-.event:hover p{
+.event-container:hover p{
   opacity: 1;
 }
-.event:hover img {
-  opacity: 0.15;
+.event-container:hover img {
+  opacity: 0.1;
 }
-.event:hover h2 {
+.event-container:hover h2 {
   color: var(--brandcolor-lightblue);
 }
-.event:hover{
+.event-container:hover .event{
   border-left: .375rem solid var(--brandcolor-lightblue);
+}
+.event-container:hover .card-content{
+  background-color: rgba(22, 62, 81, 0.1);
 }
 
 .instructions{
   text-align: center;
+}
+
+/*********************************************************************/
+#pledges{
+  width: 95%;
+  margin: 3rem auto;
+  margin-top: 4rem;
+  padding: 0.5rem;
+}
+#pledges .title{
+  width: 100%;
+}
+#pledges .title:after{
+  content: "";
+  display: block;
+  width: 98%;
+  margin: 1rem auto;
+  height: 1.5px;
+  background: linear-gradient(135deg, var(--brandcolor-lightblue), var(--brandcolor-darkblue));
+  opacity: 0.6;
+}
+
+.pledge{
+  margin: 0.5rem;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, var(--brandcolor-lightblue), var(--brandcolor-darkblue)) border-box;
+}
+
+.btn-outline-primary{
+  color: var(--brandcolor-darkblue);
+  border-color: var(--brandcolor-darkblue);
+}
+.btn-outline-primary:hover{
+  background-color: var(--brandcolor-darkblue);
+}
+
+/*Form Styling Here*/
+
+/* Newsletter section container */
+#newsletter-section {
+  width: 95%;
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, var(--brandcolor-lightblue), var(--brandcolor-darkblue)) border-box;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Newsletter form styling */
+.newsletter-form {
+  margin-top: 1.5rem;
+}
+
+/* Input field styling - Email and Name */
+.newsletter-form .form-control {
+  border-color: var(--brandcolor-darkblue);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Focus state for input fields */
+.newsletter-form .form-control:focus {
+  border-color: var(--brandcolor-lightblue);
+  box-shadow: 0 0 0 0.2rem rgba(0, 199, 253, 0.25);
+}
+
+/* Checkbox styling */
+.checkbox-group .form-check-input {
+  border-color: var(--brandcolor-darkblue);
+  width: 1.25em;
+  height: 1.25em;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Checkbox focus state */
+.checkbox-group .form-check-input:focus {
+  border-color: var(--brandcolor-lightblue);
+  box-shadow: 0 0 0 0.2rem rgba(0, 199, 253, 0.25);
+}
+
+/* Checkbox checked state with brand colors */
+.checkbox-group .form-check-input:checked {
+  background-color: var(--brandcolor-darkblue);
+  border-color: var(--brandcolor-darkblue);
+}
+
+/* Checkbox label text */
+.checkbox-group .form-check-label {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Subscribe button styling */
+.newsletter-btn {
+  background: linear-gradient(135deg, var(--brandcolor-lightblue), var(--brandcolor-darkblue));
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: scale 0.3s ease;
+  width: 100%;
+  color: white;
+}
+
+/* Subscribe button hover state */
+.newsletter-btn:hover {
+  scale: 1.02;
+}
+
+/* Subscribe button active state */
+.newsletter-btn:active {
+  transform: translateY(0px);
+}
+
+/* Success message styling */
+.alert-success {
+  background-color: rgba(0, 199, 253, 0.1);
+  border-color: var(--brandcolor-darkblue);
+  color: var(--brandcolor-darkblue);
+  margin-top: 1rem;
+  font-weight: 500;
 }
 
 /*********************************************************************/
@@ -195,7 +337,7 @@ header h1::after {
     min-width: 260px;
   }
   .card-content{
-    height: 12rem;
+    height: 15rem;
   }
   .card-content p{
     font-size: 1.15rem;
