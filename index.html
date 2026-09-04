@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html>
 <head>
   <meta charset="utf-8" > 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -346,5 +346,22 @@
     </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script>
+    //RTL Support
+    /*  RTL languages
+    Arabic (ar), Hebrew (he), Persian/Farsi (fa), and Urdu (ur).
+    */
+    const rtlLangs = ["ar", "he", "fa", "ur", "yi"];
+    function updateLanguageDirection(currentLang) {
+      const isRtl = rtlLangs.includes(currentLang);
+      const direction = isRtl ? "rtl" : "ltr";
+
+      // Apply attributes to the root HTML node
+      document.documentElement.dir = direction;
+      document.documentElement.lang = currentLang;
+    }
+    console.log(`Current Language: ${navigator.language}`);
+    updateLanguageDirection(navigator.language.split("-")[0]);
+  </script>
 </body>
 </html>
