@@ -4,13 +4,12 @@ You'll adapt your Intel Journey webpage to support right-to-left (RTL) languages
 You'll modify the layout, integrate Bootstrap, and add a subscription form to enhance user engagement.
 
 ///////////////////////////// TASKS ////////////////////////////////
-
-    –The website correctly applies RTL layout, including proper text flow, alignment, and element repositioning
-    -Uses Bootstrap’s grid for a responsive layout with icons in headings and consistently styled 'Learn More' buttons, adapting to all screen sizes
-    -A styled subscription form is included, along with a simple footer
-    -The site achieves a score of 90 or more on Lighthouse accessibility tests, with proper color contrast, descriptive alt attributes, and an accessible subscription form
-    -A Bootstrap component (modal, carousel, accordion) is correctly implemented and clearly enhances the functionality or user experience
-6) (Bonus) Auto-detect language switches from LTR to RTL
+- The website correctly applies RTL layout, including proper text flow, alignment, and element repositioning
+- Uses Bootstrap’s grid for a responsive layout with icons in headings and consistently styled 'Learn More' buttons, adapting to all screen sizes
+- A styled subscription form is included, along with a simple footer
+- The site achieves a score of 90 or more on Lighthouse accessibility tests, with proper color contrast, descriptive alt attributes, and an accessible subscription form
+- A Bootstrap component (modal, carousel, accordion) is correctly implemented and clearly enhances the functionality or user experience
+- (Bonus) Auto-detect language switches from LTR to RTL
     -Implemented JavaScript script to detect language changes and dynamically apply RTL mode
 
 
